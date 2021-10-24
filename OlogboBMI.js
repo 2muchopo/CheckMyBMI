@@ -16,28 +16,21 @@ button.addEventListener('click', function (e) {
 
     let comment;
     switch (true) {
-        case (bmi < 18.5):
-            comment = 'You are underweight and may need to build some muscles and eat more food.';
+        case(bmi < 18.5): comment = 'You are underweight and may need to build some muscles and eat more food.';
             console.log('small')
-          break;
-        case (bmi > 25 && bmi < 29.9) :
-            comment =  'Your bmi says you are overweight, you may need to take more intense gym routines, check your diet or better still, consult your doctor for better medical advice'
-             ;
             break;
-          
-        case (bmi > 18.5 && bmi < 25):
-           comment = 'Very, you are fit, you may just need to maintain your routine exercises and diet. Bravo!!!';
-        break;
-        case (bmi > 29.9) :
-         comment = 'Your bmi says you are Obese, you may need to take more intense gym routines, check your diet or better still, consult your doctor for better medical advice';
-          break;
-          default:
-            comment ='No value'
+        case(bmi > 25 && bmi < 29.9): comment = 'Your bmi says you are overweight, you may need to take more intense gym routines, check your diet or better still, consult your doctor for better medical advice';
+            break;
 
-              
-        
-     }
-     answer.innerHTML = name + ', your bmi is' + ' ' + bmi + '.' + '<br>' + comment
-     
+        case(bmi > 18.5 && bmi < 25): comment = 'Very good, you are fit, you may just need to maintain your routine exercises and diet. Bravo!!!';
+            break;
+        case(bmi > 29.9): comment = 'Your bmi says you are Obese, you may need to take more intense gym routines, check your diet or better still, consult your doctor for better medical advice';
+            break;
+        default: comment = 'No value'
+
+
+    }
+    answer.innerHTML = name + ', your bmi is' + ' ' + bmi + '.' + '<br>' + comment
+
 })
-//answer.innerText = `${name}, your BMI is ${bmi} ${comment} `
+// answer.innerText = `${name}, your BMI is ${bmi} ${comment} `
